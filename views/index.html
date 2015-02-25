@@ -12,8 +12,10 @@
 			<h3>Results</h3>
 			<dl class="dl-horizontal">
 			  % for name, out in page.students.iteritems():
-			  	<dt>{{name}}</dt>
-			  	<dd>{{len(out) - 1}}/{{page.totalTests}}</dd>
+			    % if out:
+			  	  <dt>{{name}}</dt>
+			  	  <dd>{{len(out) - 1}}/{{page.totalTests}}</dd>
+			  	% end
 			  % end
 			</dl>
 		</div>
