@@ -9,11 +9,19 @@
 	<div class='container'>
 		<h1>Sudoku Tester</h1>
 		<h3>Results</h3>
+		% if page.rawOutput:
+		  <p>
+		  % for line in page.rawOutput.split('\n'):
+			{{line}}<br>
+		  % end
+		  </p>
+		% else:
 		<dl class="dl-horizontal">
-		  % for line in output:
+		  % for line in page.output:
 		  <dt>{{line[0]}}</dt>
 		  <dd>:{{line[1]}}</dd>
 		  % end
+		% end
 		</dl>
 	</div>
 </body>

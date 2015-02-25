@@ -11,9 +11,9 @@
 		<div class='col-md-4'>
 			<h3>Results</h3>
 			<dl class="dl-horizontal">
-			  % for name, out in students.iteritems():
+			  % for name, out in page.students.iteritems():
 			  	<dt>{{name}}</dt>
-			  	<dd>{{len(out) - 1}}/{{totalTests}}</dd>
+			  	<dd>{{len(out) - 1}}/{{page.totalTests}}</dd>
 			  % end
 			</dl>
 		</div>
